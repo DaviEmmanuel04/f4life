@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <title>F4Life</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="index.html"><img src="assets/img/logo.png" alt="Lodo da F4Life" class="cabecalho__logo"></a>
+        <nav class="cabecalho__menu">
+            <div>
+                <a href="#inicio">Início</a>
+            </div>
+            <div>
+                <a href="#quem-somos">Quem somos?</a>
+            </div>
+            <div>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <div class="chamada">
+                <h1 class="chamada__titulo">Encontre o seu lugar!</h1>
+                <p class="chamada__paragrafo">F4Life é uma empresa de aluguéis de repúblicas para pessoas universitárias.</p>
+                <button class="chamada__botao" onclick="window.location.href = '#quem-somos'">Saiba mais</button>
+            </div>
+    
+            <div class="ilustracao__busca">
+                <img src="assets/img/buscando.svg" alt="Ilustração pessoa procurando casa">
+            </div>
+        </section>
+
+        <section id="quem-somos">
+            <div class="quem-somos__conteudo">
+                <h2 class="quem-somos__titulo">Quem somos?</h2>
+                <div class="quem-somos__paragrafo">
+                    <p>
+                        F4Life é uma empresa de aluguéis de repúblicas para pessoas universitárias.
+                    </p>
+                    <p>
+                        Similar aos modelos de Quinto Andar e Loft, a empresa realiza reformas e 
+                        prepara moradias para recepção de pessoas universitárias em um ambiente específico 
+                        e otimizado para a vida de graduação.
+                    </p>
+                </div>
+            </div>
+            <div class="ilustracao__estante--div">
+                <img src="assets/img/estante.svg" alt="Ilustração de uma garota deitada próxima a uma estante de livros" class="ilustracao__estante">
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="contato__conteudo">
+                <div class="contato__conteudo--geral">
+                    <h2 class="contato__formulario--titulo">Entre em contato</h2>
+                    <div class="contato__conteudo--formulario">
+                        <form action="">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="input__email" name="email" required>
+                            <label for="mensagem">Mensagem</label>
+                            <textarea name="mensagem" class="input__mensagem" cols="20" rows="5" required></textarea>
+                            <div class="input__btn--div">
+                                <input type="submit" class="input__btn" name="btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="ilustracao__contato--div">
+                    <img src="assets/img/contato.svg" alt="Ilustração pessoas no computador" class="ilustracao__contato">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <img src="assets/img/logo.png" alt="Logo da F4Life" class="logo__rodape">
+
+        <div class="redes">
+            <div class="icone__facebook">
+                <a href="https://www.facebook.com/"><img src="assets/img/logo_facebook.svg" alt="Logo facebook" class="icone"></a>
+            </div>
+            <div class="icone__linkedin">
+                <a href="https://br.linkedin.com/"><img src="assets/img/logo_linkeid.svg" alt="Logo linkedin" class="icone"></a>
+            </div>
+            <div class="icone__twitter">
+                <a href="https://twitter.com/"><img src="assets/img/logo_twitter.svg" alt="Logo twitter" class="icone__twitter icone"></a>
+            </div>
+        </div>
+
+        <p class="direitos">Todos os direitos reservados © 2022 F4LIFE</p>
+    </footer>
+</body>
+</html>

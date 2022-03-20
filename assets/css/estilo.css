@@ -1,0 +1,428 @@
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: 1s all;
+}
+
+:root {
+    --azul: #132235;
+    --azul_neon: #6DDAD3;
+    --cinza: #A2A8AF;
+    --branco: #FFFFFF;
+}
+
+body {
+    width: 100%;
+    font-family: 'Open Sans','icones', sans-serif;
+}
+
+/*==================================================================*/
+
+.cabecalho {
+    color: var(--cinza);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--azul);
+    padding: 20px 10px;
+
+    position: fixed;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cabecalho__menu {
+    color: var(--branco);
+    display: flex;
+    gap: 20px;
+}
+
+.cabecalho__menu a:hover{
+    color: var(--azul_neon);
+    transform: scale(1.05);
+
+    transition: .3s all;
+}
+
+.cabecalho__menu a:active{
+    color: var(--branco);
+}
+
+.cabecalho__logo {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/*==================================================================*/
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 120px;
+}
+
+.chamada__titulo {
+    color: var(--azul);
+    max-width: 590px;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: 49px; */
+    margin-bottom: 20px;
+}
+
+.chamada__paragrafo {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 30px;
+    max-width: 350px;
+}
+
+.chamada__botao {
+    background-color: var(--azul);
+    color: var(--azul_neon);
+    border-radius: 10px;
+    padding: 5px 0px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+.chamada__botao:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .5s all;
+
+    color: var(--azul);
+    background-color: var(--azul_neon);
+}
+
+.ilustracao__busca {
+    width: 380px;
+    margin-bottom: 30px;
+}
+
+/*==================================================================*/
+
+#quem-somos{
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 30px 20px;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quem-somos__titulo {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.quem-somos__paragrafo {
+    font-size: 16px;
+    font-weight: 400;
+
+    margin-bottom: 30px;
+}
+
+.ilustracao__estante--div {
+    width: 335px;
+}
+
+
+/*==================================================================*/
+
+#contato {
+    color: var(--azul);
+
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    padding-top: 100px;
+}
+
+.contato__formulario--titulo {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33px;
+    color: var(--azul);
+}
+
+.contato__conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contato__conteudo--formulario {
+    width: 100%;
+}
+
+
+
+.ilustracao__contato--div {
+    width: 349px;
+    margin-bottom: 40px;
+}
+
+.contato__conteudo--formulario label{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+.input__mensagem{
+    display: block;
+    border: 1px solid var(--azul);
+    border-radius: 10px;
+
+    width: 100%;
+    padding: 10px;
+
+    margin-bottom: 15px;
+}
+
+/* .ilustracao__contato {
+    width: 349px;
+    margin-bottom: 40px;
+} */
+
+.input__email {
+    border: 1px solid var(--azul);
+    border-radius: 10px;
+    width: 100%;
+
+    padding: 10px;
+}
+
+.input__btn--div {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.input__btn {
+    color: var(--branco);
+    background-color: var(--azul);
+
+    padding: 5px 10px;
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+
+    margin-bottom: 25px;
+}
+
+.input__btn:hover {
+    transform: scale(1.05);
+    color: var(--azul);
+    background-color: var(--azul_neon);
+    transition: .3s all;
+}
+
+/*==================================================================*/
+
+.redes {
+    height: 60px;
+    background-color: var(--azul);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.direitos {
+    display: none;
+}
+
+.logo__rodape {
+    display: none;
+}
+
+.icone__twitter {
+    height: 35px;
+}
+
+.icone:hover{
+    transform: scale(1.09);
+    transition: .3s all;
+}
+
+@media screen and (min-width: 768px) {
+
+    .cabecalho {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 100px;
+    }
+
+    .cabecalho__logo {
+        height: 60px;
+        margin-bottom: 0px;
+    }
+
+    #inicio {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 100px;
+        padding-top: 160px;
+        margin-bottom: 200px;
+    }
+
+    .chamada__botao {
+        background-color: var(--azul);
+        color: var(--azul_neon);
+        border-radius: 10px;
+        padding: 5px 0px;
+        width: 100%;
+        height: 75px;
+        max-width: 350px;
+        margin-bottom: 30px;
+    
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27px;
+    }
+
+    .chamada__titulo {
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .chamada__paragrafo {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 30px;
+        max-width: 560px;
+    }
+
+    .ilustracao__busca {
+        width: 572px;
+        margin-bottom: 0px;
+    }
+
+    /*==================================================================*/
+
+    #quem-somos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 190px 100px;
+    }
+    
+    .quem-somos__titulo {
+        font-size: 52px;
+        max-width: 370px;
+    }
+
+    .quem-somos__paragrafo {
+        font-size: 30px;
+        max-width: 715px;
+    }
+    
+    .ilustracao__estante--div {
+        width: 25em;
+        max-width: 627px;
+    }
+
+    /*==================================================================*/
+
+    #contato {
+        padding: 0px;
+    }
+
+    .contato__conteudo {
+        padding-top: 0;
+        padding: 190px 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .contato__conteudo--formulario {
+        width: 500px;
+    }
+
+    .ilustracao__contato--div {
+        width: 500px;
+        margin-bottom: 0;
+    }
+
+    .input__btn--div {
+        justify-content: left;
+    }
+
+    .contato__formulario--titulo {
+        font-size: 52px;
+    }
+
+    .contato__conteudo--formulario label {
+        font-size: 28px;
+    }
+
+    .input__btn {
+        padding: 20px 10px;
+        font-size: 22px;
+        width: 160px;
+    }
+
+    /*==================================================================*/
+    .rodape {
+        background-color: var(--azul);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo__rodape {
+        display: inline;
+        height: 50px;
+    }
+
+    .direitos {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: inline;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px;
+        color: var(--branco);
+    }
+
+    .redes {
+        gap: 40px;
+    }
+
+}
