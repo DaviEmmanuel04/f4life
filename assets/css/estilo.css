@@ -110,7 +110,8 @@ body {
 
 .ilustracao__busca {
     width: 380px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    margin-top: 30px;
 }
 
 /*==================================================================*/
@@ -118,8 +119,8 @@ body {
 #quem-somos{
     background-color: var(--azul);
     color: var(--branco);
-    padding: 30px 20px;
-    padding-top: 120px;
+    padding: 120px 20px;
+    padding-bottom: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -387,6 +388,7 @@ body {
 
     .contato__conteudo--formulario label {
         font-size: 28px;
+        margin-bottom: 15px;
     }
 
     .input__btn {
