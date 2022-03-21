@@ -8,6 +8,20 @@ html {
     transition: 1s all;
 }
 
+.invisivel {
+    display: none;
+}
+
+.visivel {
+    display: inline;
+    color: red;
+    font-weight: 700;
+}
+
+.alertas {
+    margin-bottom: 15px;
+}
+
 :root {
     --azul: #132235;
     --azul_neon: #6DDAD3;
@@ -146,6 +160,53 @@ body {
     margin-top: 50px;
 }
 
+/*==================================================================*/
+
+#opiniao {
+    background-color: var(--azul);
+    color: var(--branco);
+    gap: 30px;
+    padding: 20px;
+
+}
+
+.opiniao__titulo {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+
+    margin-bottom: 50px;
+}
+
+.opiniao__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.opiniao__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.opiniao__nome {
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.opiniao__texto {
+    max-width: 170px;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+}
 
 /*==================================================================*/
 
@@ -337,7 +398,10 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 190px 100px;
+        padding-top: 190px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 50;
     }
     
     .quem-somos__titulo {
@@ -353,6 +417,25 @@ body {
     .ilustracao__estante--div {
         width: 25em;
         max-width: 627px;
+    }
+
+    /*==================================================================*/
+
+    #opiniao {
+        padding-bottom: 90px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .opiniao__div {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .opiniao__titulo {
+        margin-top: 100px;
+        font-size: 52px;
+        margin-bottom: 60px;
     }
 
     /*==================================================================*/

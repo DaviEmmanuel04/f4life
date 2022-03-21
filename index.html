@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/estilo.css">
     <title>F4Life</title>
 </head>
@@ -20,6 +21,9 @@
             </div>
             <div>
                 <a href="#quem-somos">Quem somos?</a>
+            </div>
+            <div>
+                <a href="#opiniao">Opinião</a>
             </div>
             <div>
                 <a href="#contato">Contato</a>
@@ -57,6 +61,40 @@
                 <img src="assets/img/estante.svg" alt="Ilustração de uma garota deitada próxima a uma estante de livros" class="ilustracao__estante">
             </div>
         </section>
+        <section id="opiniao">
+            <h2 class="opiniao__titulo">Veja a opinião dos nossos clientes</h2>
+            <div class="opiniao__div">
+                <div class="opiniao__conteudo">
+                    <img src="assets/img/foto_user01.png" alt="Foto do cliente Astrogildo">
+                    <div class="opiniao__nome">
+                        <h3>Astrogildo</h3>
+                    </div>
+                    <div class="opiniao__texto">
+                        <p>“A F4Life prestou um serviço incrível.”</p>
+                    </div>
+                </div>
+                
+                <div class="opiniao__conteudo">
+                    <img src="assets/img/foto_user02.png" alt="Foto do cliente Astrogildo">
+                    <div class="opiniao__nome">
+                        <h3>Creuza</h3>
+                    </div>
+                    <div class="opiniao__texto">
+                            <p>“Serviço de qualidade com um preço justo.”</p>
+                        </div>
+                </div>
+    
+                <div class="opiniao__conteudo">
+                    <img src="assets/img/foto_user03.png" alt="Foto do cliente Astrogildo">
+                    <div class="opiniao__nome">
+                        <h3>Jurema</h3>
+                    </div>
+                    <div class="opiniao__texto">
+                        <p>“Já tive experiência com outras empresas, mas a F4Life, sem duvidas tem o melhor serviço.”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="contato">
             <div class="contato__conteudo">
@@ -68,6 +106,10 @@
                             <input type="email" class="input__email" name="email" required placeholder="exemplo: user@dominio.com" id="email">
                             <label for="mensagem">Mensagem:</label>
                             <textarea name="mensagem" class="input__mensagem" cols="20" rows="5" required placeholder="Digite sua mensagem aqui" id="mensagem"></textarea>
+                            <div class="alertas">
+                                <p class="invisivel" id="erro_email">Erro ao enviar o formulário: e-mail inválido</p>
+                                <p class="invisivel" id="erro_mensagem">Erro ao enviar formulário: preencha o campo mensagem</p>
+                            </div>
                             <div class="input__btn--div">
                                 <input type="submit" class="input__btn" name="btn" id="btn_sub">
                             </div>
