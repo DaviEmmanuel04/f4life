@@ -8,23 +8,35 @@ html {
     transition: 1s all;
 }
 
-.invisivel {
-    display: none;
-}
-
-.visivel {
-    display: inline;
+.erro{
     color: red;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
-#enviou {
+.enviou {
     color: green;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .alertas {
     margin-bottom: 15px;
+}
+
+#ok {
+    color: var(--branco);
+    background-color: var(--azul);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.invisivel {
+    display: none
+}
+
+.visivel {
+    display: inline;
 }
 
 :root {
