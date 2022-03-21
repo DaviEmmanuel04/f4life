@@ -18,6 +18,11 @@ html {
     font-weight: 700;
 }
 
+#enviou {
+    color: green;
+    font-weight: 700;
+}
+
 .alertas {
     margin-bottom: 15px;
 }
