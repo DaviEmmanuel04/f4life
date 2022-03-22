@@ -64,14 +64,14 @@ btn.addEventListener('click', (event) => {
         //alert("O campo mensagem deve ser preechido.");
         msg.value = "";
         const erro_msg = "Erro ao enviar formulário: preencha o campo mensagem"
+        if(document.getElementById("alerta").classList.contains("enviou")){
+            document.getElementById("alerta").classList.remove("enviou");
+        }
         document.getElementById("alerta").innerHTML = erro_msg;
         document.getElementById("alerta").classList.add("erro")
         document.getElementById("alerta").classList.remove("enviou")
 
 
-        if(document.getElementById("alerta").classList.contains("enviou")){
-            document.getElementById("alerta").classList.remove("enviou");
-        }
 
         if(document.getElementById("ok").classList.contains("invisivel")){
             document.getElementById("ok").classList.remove("invisivel");
