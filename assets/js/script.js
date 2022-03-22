@@ -22,7 +22,7 @@ btn.addEventListener('click', (event) => {
             qtd++;
         }
     }
-    let caracInv = "!#$%&*()}{<>:;?/+=,`~^|ªº°¨¬¹²³£¢§'" + '""';
+    let caracInv = "!#$%&*()}{<>:;?/+=,`~^|ªº°¨¬¹²³£¢§'" + '"';
     let carac_inv = false;
 
     for(let k = 0; k < email.value.length; k++){
@@ -33,6 +33,7 @@ btn.addEventListener('click', (event) => {
         }
     }
 
+    const pontPosArroba = email.value[(email.value.indexOf("@") + 1)] === ".";
     const terminaPonto = email.value[(email.value.length - 1)]  === ".";
     const emailVazio = email.value === "";
     const maisArroba = qtd > 1;
@@ -42,10 +43,13 @@ btn.addEventListener('click', (event) => {
     const semDominio = email.value.indexOf(".") - email.value.indexOf("@") === 1 || email.value.indexOf(".") - email.value.indexOf("@") >17 ;
     const semUser = email.value.indexOf("@") === 0;
     const userGrande = email.value.indexOf("@") > 32;
-    if (emailVazio || semArroba || semPonto || semDominio || semUser || userGrande || maisArroba || nadaPosPonto || terminaPonto || carac_inv){
-        email.value = "";
-        // document.querySelector("#erro_email").classList.toggle("visivel")
+    if (emailVazio || semArroba || semPonto || semDominio || semUser || userGrande || maisArroba || nadaPosPonto || terminaPonto || carac_inv || pontPosArroba){
         const erro_email = "Erro ao enviar formulário: email inválido"
+        
+        if(document.getElementById("alerta").classList.contains("enviou")){
+            document.getElementById("alerta").classList.remove("enviou");
+        
+        }
         document.getElementById("alerta").innerHTML = erro_email;
         document.getElementById("alerta").classList.add("erro")
 
@@ -64,6 +68,7 @@ btn.addEventListener('click', (event) => {
         //alert("O campo mensagem deve ser preechido.");
         msg.value = "";
         const erro_msg = "Erro ao enviar formulário: preencha o campo mensagem"
+        
         if(document.getElementById("alerta").classList.contains("enviou")){
             document.getElementById("alerta").classList.remove("enviou");
         }
