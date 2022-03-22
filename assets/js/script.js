@@ -1,7 +1,9 @@
 const btn = document.getElementById("btn_sub");
 const btn_ok = document.getElementById("ok");
 
-function verifica() {
+// function verifica() {
+btn.addEventListener('click', (event) => {
+    event.preventDefault();
     const email = document.getElementById("email");
     const msg = document.getElementById("mensagem");
     let valida = 0
@@ -20,6 +22,18 @@ function verifica() {
             qtd++;
         }
     }
+    let caracInv = "!#$%&*()}{<>:;?/+=,`~^|ªº°¨¬¹²³£¢§'" + '""';
+    let carac_inv = false;
+
+    for(let k = 0; k < email.value.length; k++){
+        for(let l = 0; l < caracInv.length; l++){
+            if(email.value[k] === caracInv[l]){
+                carac_inv = true; 
+            }
+        }
+    }
+
+    const terminaPonto = email.value[(email.value.length - 1)]  === ".";
     const emailVazio = email.value === "";
     const maisArroba = qtd > 1;
     const semArroba = email.value.indexOf("@") === -1;
@@ -28,7 +42,7 @@ function verifica() {
     const semDominio = email.value.indexOf(".") - email.value.indexOf("@") === 1 || email.value.indexOf(".") - email.value.indexOf("@") >17 ;
     const semUser = email.value.indexOf("@") === 0;
     const userGrande = email.value.indexOf("@") > 32;
-    if (emailVazio || semArroba || semPonto || semDominio || semUser || userGrande || maisArroba || nadaPosPonto){
+    if (emailVazio || semArroba || semPonto || semDominio || semUser || userGrande || maisArroba || nadaPosPonto || terminaPonto || carac_inv){
         email.value = "";
         // document.querySelector("#erro_email").classList.toggle("visivel")
         const erro_email = "Erro ao enviar formulário: email inválido"
@@ -41,8 +55,6 @@ function verifica() {
         }else{
             document.getElementById("ok").classList.add("visivel");
         }
-
-        return 0;
     }else{
         valida += 1;
     }
@@ -55,6 +67,11 @@ function verifica() {
         document.getElementById("alerta").innerHTML = erro_msg;
         document.getElementById("alerta").classList.add("erro")
         document.getElementById("alerta").classList.remove("enviou")
+
+
+        if(document.getElementById("alerta").classList.contains("enviou")){
+            document.getElementById("alerta").classList.remove("enviou");
+        }
 
         if(document.getElementById("ok").classList.contains("invisivel")){
             document.getElementById("ok").classList.remove("invisivel");
@@ -86,9 +103,11 @@ function verifica() {
         }
     }
 
-}
+})
 
-function limpaAlerta() {
+// function limpaAlerta() {
+btn_ok.addEventListener('click', (evento) => {
+    evento.preventDefault()
     document.getElementById("alerta").innerHTML = "";
     if(document.getElementById("ok").classList.contains("visivel")){
         document.getElementById("ok").classList.remove("visivel");
@@ -96,7 +115,7 @@ function limpaAlerta() {
     }else{
         document.getElementById("ok").classList.add("invisivel");
     }
-}
+})
 
-btn.onclick = verifica;
-btn_ok.onclick = limpaAlerta;
+// btn.onclick = verifica;
+// btn_ok.onclick = limpaAlerta;

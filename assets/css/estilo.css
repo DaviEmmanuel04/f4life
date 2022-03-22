@@ -25,10 +25,16 @@ html {
 }
 
 #ok {
-    color: var(--branco);
-    background-color: var(--azul);
-    padding: 10px 20px;
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: solid 2px var(--azul);
     border-radius: 10px;
+}
+
+#ok:hover {
+    cursor: pointer;
 }
 
 .invisivel {
@@ -254,11 +260,17 @@ body {
     width: 100%;
 }
 
-
-
-.ilustracao__contato--div {
+.ilustracao__contato {
     width: 349px;
     margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.ilustracao__contato--div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .contato__conteudo--formulario label{
@@ -316,6 +328,7 @@ body {
 }
 
 .input__btn:hover {
+    cursor: pointer;
     transform: scale(1.05);
     color: var(--azul);
     background-color: var(--azul_neon);
@@ -349,7 +362,7 @@ body {
     transition: .3s all;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 
     .cabecalho {
         flex-direction: row;
@@ -474,7 +487,7 @@ body {
         width: 500px;
     }
 
-    .ilustracao__contato--div {
+    .ilustracao__contato {
         width: 500px;
         margin-bottom: 0;
     }
